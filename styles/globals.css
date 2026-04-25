@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-white: #FFFFFF;
+  --color-wall: #F8F7F5;
+  --color-paper: #F2F0EC;
+  --color-border: #E0DDD8;
+  --color-ink: #1A1916;
+  --color-ink-secondary: #6B6860;
+  --color-ink-tertiary: #A8A49C;
+  --color-signal: #FF5E2C;
+  --color-signal-dim: rgba(255, 94, 44, 0.12);
+  --color-void: #0A0908;
+  --color-void-text: #E8E4DC;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 192px;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+[data-theme="labs"] {
+  --color-white: #0A0908;
+  --color-wall: #111009;
+  --color-paper: #1A1816;
+  --color-border: #2A2824;
+  --color-ink: #E8E4DC;
+  --color-ink-secondary: #8A8680;
+  --color-ink-tertiary: #504E4A;
+  --color-signal: #FF5E2C;
+}
